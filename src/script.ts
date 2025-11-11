@@ -1,3 +1,7 @@
-const country = "I love Bangladesh"
+let playerName = "Mashrafee"
 
-console.log(country)
+console.log(playerName);
+
+playerName = 34;
+
+console.log(playerName)
