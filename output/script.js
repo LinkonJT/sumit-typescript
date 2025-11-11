@@ -1,5 +1,4 @@
-let playerName = "Mashrafee";
-console.log(playerName);
-playerName = 34;
-console.log(playerName);
+let fruits = ["mango", "apple", "banana"];
+fruits.push(4);
+console.log(fruits);
 export {};

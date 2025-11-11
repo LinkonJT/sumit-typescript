@@ -1,7 +1,5 @@
-let playerName = "Mashrafee"
+let fruits = ["mango", "apple", "banana"]
 
-console.log(playerName);
+fruits.push(4)
 
-playerName = 34;
-
-console.log(playerName)
+console.log(fruits)
