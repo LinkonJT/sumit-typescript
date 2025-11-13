@@ -65,9 +65,46 @@
 
 // Lesson 8 - Function Signatures 
 
-let add: (x; number, y: number) => number;
+// let add: (x: number, y: number) => number;
 
-add = (a: number, b: number) =>{
-    console.log(a+b)
-    return a+b;
+// add = (a: number, b: number) =>{
+//     console.log(a+b)
+//     return a+b;
+// }
+
+
+// let calculation: (x: number, y: number, z: string) => number;
+
+// calculation = (a: number, b: number, c: string) =>{
+//     if(c === "add"){
+//         return a+b
+//     } else {
+//         return a - b;
+//     }
+// }
+
+
+// Lesson 9 - Classes
+class Player {
+    name: string;
+    age: number;
+    country: string;
+
+    constructor(n: string, a:Number, c: string){
+        this.name = n;
+        this.age = a;
+        this.country = c;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing`)
+    }
+
 }
+
+const masrafi =  new Player("Mashrafi", 40, 'Bangladesh')
+const saking =  new Player("Sakib", 38, 'Bangladesh')
+
+const players:Player[] = [];
+
+players.push(sakib);
+players.push(mashrafi)
