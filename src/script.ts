@@ -111,16 +111,29 @@
 
 // Lesson 10 - Access Modifiers
 
-class Player {
-    private name: string;
-    public age: number;
-    readonly country: string;
+// class Player {
+//     private name: string;
+//     public age: number;
+//     readonly country: string;
 
-    constructor(n: string, a:Number, c: string){
-        this.name = n;
-        this.age = a;
-        this.country = c;
-    }
+//     constructor(n: string, a:Number, c: string){
+//         this.name = n;
+//         this.age = a;
+//         this.country = c;
+//     }
+//     play() {
+//         console.log(`${this.name} from ${this.country} is playing`)
+//     }
+
+// }
+
+// shortcut
+class Player {
+  
+
+    constructor(  private name: string,
+    public age: number,
+    readonly country: string){}
     play() {
         console.log(`${this.name} from ${this.country} is playing`)
     }
@@ -135,5 +148,6 @@ sakib.age = 40
 sakib.country="England"
 console.log(sakib.name)
 console.log(sakib.age)
+console.log(sakib.country)
 
-const palyers: player[] = []
+const players: player[] = []
