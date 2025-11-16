@@ -85,10 +85,36 @@
 
 
 // Lesson 9 - Classes
+// class Player {
+//     name: string;
+//     age: number;
+//     country: string;
+
+//     constructor(n: string, a:Number, c: string){
+//         this.name = n;
+//         this.age = a;
+//         this.country = c;
+//     }
+//     play() {
+//         console.log(`${this.name} from ${this.country} is playing`)
+//     }
+
+// }
+
+// const masrafi =  new Player("Mashrafi", 40, 'Bangladesh')
+// const saking =  new Player("Sakib", 38, 'Bangladesh')
+
+// const players:Player[] = [];
+
+// players.push(sakib);
+// players.push(mashrafi)
+
+// Lesson 10 - Access Modifiers
+
 class Player {
-    name: string;
-    age: number;
-    country: string;
+    private name: string;
+    public age: number;
+    readonly country: string;
 
     constructor(n: string, a:Number, c: string){
         this.name = n;
@@ -104,7 +130,10 @@ class Player {
 const masrafi =  new Player("Mashrafi", 40, 'Bangladesh')
 const saking =  new Player("Sakib", 38, 'Bangladesh')
 
-const players:Player[] = [];
+sakib.name = "Mashrafi"
+sakib.age = 40
+sakib.country="England"
+console.log(sakib.name)
+console.log(sakib.age)
 
-players.push(sakib);
-players.push(mashrafi)
+const palyers: player[] = []
