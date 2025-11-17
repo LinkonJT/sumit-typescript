@@ -128,26 +128,64 @@
 // }
 
 // shortcut
-class Player {
+// class Player {
   
 
-    constructor(  private name: string,
-    public age: number,
-    readonly country: string){}
-    play() {
-        console.log(`${this.name} from ${this.country} is playing`)
-    }
+//     constructor(  private name: string,
+//     public age: number,
+//     readonly country: string){}
+//     play() {
+//         console.log(`${this.name} from ${this.country} is playing`)
+//     }
 
+// }
+
+// const masrafi =  new Player("Mashrafi", 40, 'Bangladesh')
+// const saking =  new Player("Sakib", 38, 'Bangladesh')
+
+// sakib.name = "Mashrafi"
+// sakib.age = 40
+// sakib.country="England"
+// console.log(sakib.name)
+// console.log(sakib.age)
+// console.log(sakib.country)
+
+// const players: player[] = []
+
+
+// Lesson 11 - Module System
+import { Player } from "./classes/Player.js";
+
+const mashrafi = new Player("Mashrafi", 40, "Bangladesh");
+const sakib = new Player("Sakib", 38, "Bangladesh");
+
+console.log(sakib.age);
+console.log(sakib.country);
+
+const players: Player[] = [];
+
+players.push(sakib);
+players.push(mashrafi);
+
+
+
+// Lesson 12 - Interfaces
+
+indterface RectangleOptions{
+    width: number
 }
 
-const masrafi =  new Player("Mashrafi", 40, 'Bangladesh')
-const saking =  new Player("Sakib", 38, 'Bangladesh')
+function drawRectangle(options:{
+    width: number,
+    length: number
+} ){
+    let width = options.width;
+    let length = options.length
+}
 
-sakib.name = "Mashrafi"
-sakib.age = 40
-sakib.country="England"
-console.log(sakib.name)
-console.log(sakib.age)
-console.log(sakib.country)
+drawRectangle({
+    width: 30,
+    length: 20,
 
-const players: player[] = []
+
+})
