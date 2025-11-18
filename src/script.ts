@@ -154,46 +154,69 @@
 
 
 // Lesson 11 - Module System
-import { Player } from "./classes/Player.js"
-import {IsPlayer} from './interfaces/IsPlayer.js'
+// import { Player } from "./classes/Player.js"
+// import {IsPlayer} from './interfaces/IsPlayer.js'
 
 
-const mashrafi = new Player("Mashrafi", 40, "Bangladesh");
-// const sakib = new Player("Sakib", 38, "Bangladesh");
-let sakib: IsPlayer;
+// const mashrafi = new Player("Mashrafi", 40, "Bangladesh");
+// // const sakib = new Player("Sakib", 38, "Bangladesh");
+// let sakib: IsPlayer;
 
 
-sakib = new Player("Sakib", 35, "Bangladesh")
+// sakib = new Player("Sakib", 35, "Bangladesh")
 
-console.log(sakib.age);
-console.log(sakib.country);
+// console.log(sakib.age);
+// console.log(sakib.country);
 
-const players: Player[] = [];
+// const players: Player[] = [];
 
-players.push(sakib);
-players.push(mashrafi);
+// players.push(sakib);
+// players.push(mashrafi);
 
 
 
 // Lesson 12 - Interfaces
 
-interface RectangleOptions{
-    width: number;
-    length: number;
+// interface RectangleOptions{
+//     width: number;
+//     length: number;
+// }
+
+// function drawRectangle(options:{
+//     width: number,
+//     length: number
+// } ){
+//     let width = options.width;
+//     let length = options.length
+// }
+
+
+// let threeDdoptions = {
+//   width: 30,
+//     length: 20,
+//     height: 10
+// }
+// drawRectangle(threeDdoptions)
+
+// Lesson 13 - Generics
+
+cont addID = <T extends {
+    name: string;
+    age: number;
+}
+>(obj: T) => {
+    let id = Math.floor(Math.random()*100)
+    return {...obj, id}
 }
 
-function drawRectangle(options:{
-    width: number,
-    length: number
-} ){
-    let width = options.width;
-    let length = options.length
-}
 
 
-let threeDdoptions = {
-  width: 30,
-    length: 20,
-    height: 10
-}
-drawRectangle(threeDdoptions)
+let user = addID({
+    name: "mashrafi",
+    age: 40,
+    country: 'Bangladesh'
+})
+
+
+// let user = "Mashrafi"
+addID(user)

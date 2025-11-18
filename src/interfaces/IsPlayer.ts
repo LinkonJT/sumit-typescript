@@ -4,5 +4,5 @@ interface IsPlayer {
     readonly country: string;
 
     play(): void;
-    getAge() : number
+    getProperty() : number
 }
