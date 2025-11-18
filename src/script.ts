@@ -154,10 +154,16 @@
 
 
 // Lesson 11 - Module System
-import { Player } from "./classes/Player.js";
+import { Player } from "./classes/Player.js"
+import {IsPlayer} from './interfaces/IsPlayer.js'
+
 
 const mashrafi = new Player("Mashrafi", 40, "Bangladesh");
-const sakib = new Player("Sakib", 38, "Bangladesh");
+// const sakib = new Player("Sakib", 38, "Bangladesh");
+let sakib: IsPlayer;
+
+
+sakib = new Player("Sakib", 35, "Bangladesh")
 
 console.log(sakib.age);
 console.log(sakib.country);
@@ -171,8 +177,9 @@ players.push(mashrafi);
 
 // Lesson 12 - Interfaces
 
-indterface RectangleOptions{
-    width: number
+interface RectangleOptions{
+    width: number;
+    length: number;
 }
 
 function drawRectangle(options:{
@@ -183,9 +190,10 @@ function drawRectangle(options:{
     let length = options.length
 }
 
-drawRectangle({
-    width: 30,
+
+let threeDdoptions = {
+  width: 30,
     length: 20,
-
-
-})
+    height: 10
+}
+drawRectangle(threeDdoptions)
